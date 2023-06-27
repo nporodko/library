@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>library</h1>
+
+    <button class='buttonLogIn' id='logInBtn'> Log in</button>
+
+    <div id="id01" class="modal">
+      <form  id="id01" method="post" class="modalContent">
+        <div class="logIn">
+          <label for="name">Username</label>
+          <input type="text" placeholder="Enter Username" name="uname" required/>
+          <label for="psw">Password</label>
+          <input  type="password" placeholder="Enter Password" name="psw" required/>
+
+          <button class="cancelBtn"type="submit"> Login</button>
+
+          <div>
+          <label for='remember'>Remember me</label>
+          <input type="checkbox" checked="checked" name="remember" /> 
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </header>
+
+  <container>
+    <div class="divForAddBtn">
+      <button class="addButton" id="addBtn">+Add book</button>
+    </div>
+    <div id='library' class="content">
+    </div>  
+  </container>
+
+  <footer>
+    <p>
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      nporodko
+    </p>
+  </footer>
+
+
+  <div class="addBookBox">
+    <form class="addBookForm hidden" id="addBookForm" onsubmit="event.preventDefault(); validateMyForm()"> 
+      <h3>Add new book</h3>
+      <input 
+        class="input"
+        type="text"
+        id="title"
+        placeholder="Title"
+        required
+        maxlength="100"
+      />
+      <input
+        class="input"
+        type="text"
+        id="author"
+        placeholder="Author"
+        required
+        maxlength="100"
+      />
+      <input
+        class="input"
+        type="number"
+        id="pages"
+        placeholder="Pages"
+        required
+      />
+      <div class="isRead"> 
+        <label for="isRead">Have you read it?</label>
+        <input class="checkbox" type="checkbox" id="isYouReadIt" />
+      </div>
+      <button id='addBook' type="submit">Add</button>
+    </form>
+
+  </div>
+
+  <script src="./javascript.js"></script>
+</body>
+</html>
