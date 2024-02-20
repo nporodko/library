@@ -13,21 +13,46 @@
 
     <button class='buttonLogIn' id='logInBtn'> Log in</button>
 
-    <div id="id01" class="modal">
-      <form  id="id01" method="post" class="modalContent">
-        <div class="logIn">
+    <div  id="id01" method="post" class="modalContent">
+      <form class="logIn" id="logInForm" novalidate>
+
+        <fieldset>
           <label for="name">Username</label>
-          <input type="text" placeholder="Enter Username" name="uname" required/>
-          <label for="psw">Password</label>
-          <input  type="password" placeholder="Enter Password" name="psw" required/>
+          <input type="text" placeholder="Username" name="name" id="name" minlength="3" required/>
+          <small id="message"></small>
+        </fieldset>
 
-          <button class="cancelBtn"type="submit"> Login</button>
+        <fieldset>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" name="email" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required/>
+          <small id="message"></small>
+        </fieldset>
 
-          <div>
-          <label for='remember'>Remember me</label>
-          <input type="checkbox" checked="checked" name="remember" /> 
-          </div>
-        </div>
+        <fieldset>
+          <label for="country">Country</label>
+          <input type="text" placeholder="Country" name="country" id="country"/>
+          <small id="message"></small>
+        </fieldset>
+
+        <fieldset>
+          <label for="zipCode">Zip Code</label>
+          <input type="text" placeholder="Zip Code" name="zipCode" id="zipCode"/>
+          <small id="message"></small>
+        </fieldset>
+
+        <fieldset>
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\S]{8,}$" required/>
+          <small id="message"></small>
+        </fieldset>
+
+        <fieldset>
+          <label for="confirm">Confirm Password</label>
+          <input type="password" placeholder="Confirm Password" name="confirm" id="confirm" required/>
+          <small id="message"></small>
+        </fieldset>
+
+        <button id='submit' class="submitBtn" type="submit">Submit</button>
       </form>
     </div>
 

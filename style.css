@@ -22,40 +22,66 @@ h1 {
   margin: 20px 20px 20px 0px;
 }
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+
+input {
+  width: 93%;
+  padding: 5px 10px;
+  margin-top: 10px;
   display: inline-block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  border-radius: 5px;
 }
+
+input:invalid {
+  border: 1px solid  #fa3e3e;
+  border-radius: 5px;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+#message {
+  color: red;
+}
+
 .modal {
   display: none; 
-  position: fixed; 
-  width: 30%;
-  height: 36%;
+  margin: auto;
   justify-items: center;
   align-items: center;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 2px black;
-  margin: 200px 300px 300px 500px;
 }
 .modalContent {
-  display: flex;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   align-content: center;
   justify-content: center;
   margin: 5px auto 15% auto; 
-  border: none;
   padding: 15px;
-  width: 80%; 
-  height: 80%;
+  width: 25%; 
+  height: 40%;
 }
+
+fieldset {
+  border: none;
+  padding: 0px;
+}
+
+.logIn {
+  border: 2px solid black;
+  border-radius: 3%;
+  padding: 10px;
+  background-color: #e2e0e0;
+}
+
 .modalContent button {
   font-size: 17px;
   margin: 5px;
@@ -78,6 +104,11 @@ button {
 
 button:hover {
   filter: brightness(90%);
+}
+
+#submit {
+  width: 100%;
+  margin: 0px;
 }
 
 container {
@@ -171,11 +202,11 @@ input[type='number'] {
   width: 50%
 }
 
-.input {
+/* .input {
  width: 93%;
  padding: 10px;
  border-radius: 5px;
-}
+} */
 
 .isRead {
   display: flex;
